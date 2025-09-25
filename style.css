@@ -1,0 +1,162 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  color: #333;
+  line-height: 1.6;
+}
+html { scroll-behavior: smooth; }
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  padding: 10px 0;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav ul li { margin: 0 15px; }
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+nav ul li a:hover {
+  background: #fff;
+  color: #2563eb;
+  border-radius: 6px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 120px 20px 60px 20px;
+  color: #fff;
+}
+header h1 { font-size: 2.5rem; }
+header p { font-size: 1.2rem; }
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.content, .sidebar {
+  background: rgba(255,255,255,0.95);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Forms */
+label { display: block; margin-top: 10px; font-weight: bold; }
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover { background: #1e3a8a; }
+
+/* To-Do List */
+.todo-box .input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+#taskList { list-style: none; padding: 0; }
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+#taskList li button {
+  background: #ef4444;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+}
+#taskList li button:hover { background: #b91c1c; }
+
+/* Quiz Section */
+#quiz {
+  margin: 40px auto;
+  max-width: 600px;
+}
+#quizContainer div { margin-bottom: 15px; }
+#quizContainer label { display: block; margin: 5px 0; }
+#quizResult { font-weight: bold; margin-top: 15px; }
+
+/* Joke Section */
+#jokes {
+  margin: 40px auto;
+  max-width: 600px;
+  background: rgba(255,255,255,0.95);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+#jokeBtn {
+  background: #f59e0b;
+  margin: 15px 0;
+}
+#jokeBtn:hover { background: #b45309; }
+#jokeText {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  header h1 { font-size: 2rem; }
+  header p { font-size: 1rem; }
+}
+@media (max-width: 600px) {
+  nav ul { flex-direction: column; }
+  nav ul li { margin: 8px 0; }
+  header h1 { font-size: 1.8rem; }
+  button { font-size: 14px; }
+}
